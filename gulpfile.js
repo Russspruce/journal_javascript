@@ -3,7 +3,7 @@ var browserify = require('browserify');
 var source = require('vinyl-source-stream');
 
 gulp.task('jsBrowserify', function(){
-  return browserify({ entries: ['./js/journal.js'] })
+  return browserify({ entries: ['./js/journal-input.js'] })
     .bundle()
     .pipe(source('app.js'))
     .pipe(gulp.dest('./build/js'));

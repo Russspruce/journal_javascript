@@ -1,12 +1,12 @@
-var Entry = require('./../js/journal.js');
+var JournalEntry = require('./../js/journal.js').JournalEntry;
+
 
 $(document).ready(function(){
   $('#journal').submit(function(event){
     event.preventDefault();
     var headingField = $('#heading').val();
     var entryField = $('#entryText').val();
-    $('#journal_submit').hide();
-    var newEntry = new Entry(headingField, entryField);
-    $(".display").append(newEntry.makeEntry());
+    var newEntry = new JournalEntry(headingField, entryField);
+    $(".display").text(newEntry.makeEntry());
   });
 });

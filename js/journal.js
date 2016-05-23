@@ -1,8 +1,11 @@
-exports.Entry = function(heading, entryText){
+var moment = require('moment');
+
+exports.JournalEntry = function(heading, entryText){
   this.heading = heading;
   this.entryText = entryText;
+  this.time = moment().format("MMM Do YY");
 }
 
-exports.Entry.prototype.makeEntry = function(){
-  return this.heading + ": Dear diary, " + '<br>' + this.entryText;
+exports.JournalEntry.prototype.makeEntry = function(){
+  return this.time + " " + this.heading + " " + ": Dear diary, " + this.entryText;
 }

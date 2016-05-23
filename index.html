@@ -6,12 +6,14 @@
     <title>Journal</title>
   </head>
   <body>
-    <form id="journal_submit">
+    <form id="journal">
       <label for="heading">Title:</label>
-      <input id="heading" type="text">
+      <input id="heading" type="text" name="toHeadingInputTag">
       <label for="entryText">Body:</label>
-      <input id="entryText" type="textarea">
+      <textarea id="entryText" type="text" name="toBodyInputTag"></textarea>
       <button type="submit">Submit</button>
     </form>
+    <div class="display">
+    </div>
   </body>
 </html>
